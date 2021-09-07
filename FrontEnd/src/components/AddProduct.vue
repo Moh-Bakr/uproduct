@@ -20,7 +20,7 @@
       </div>
       <div class="field">
         <label> Price ($) </label>
-        <input required type="text" v-model="price" />
+        <input required type="number  " v-model="price" />
       </div>
       <div class="field">
         <label>Type </label>
@@ -37,6 +37,7 @@
           <div class="field">
             <label> Size: </label>
             <input type="number" v-model="value" />
+            
           </div>
         </div>
 
@@ -44,6 +45,7 @@
           <div class="field">
             <label> Weigth: </label>
             <input type="number" v-model="value" />
+            
           </div>
         </div>
 
@@ -64,7 +66,9 @@
       </div>
     </div>
   </div>
+  
 </template>
+
 
 <script>
 import axios from "axios";

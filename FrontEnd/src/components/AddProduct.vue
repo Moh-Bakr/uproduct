@@ -1,4 +1,5 @@
 <template>
+
   <div class="content">
     <div class="header">
       <h2>Product Add</h2>
@@ -9,23 +10,23 @@
     </div>
     <div class="separator"></div>
 
-    <div class="form">
-      <div class="field">
+    <div class="form" id="product_form">
+      <div class="field" >
         <label> SKU </label>
-        <input required type="text" v-model="sku" />
+        <input required type="text" id="sku" v-model="sku" />
       </div>
-      <div class="field">
+      <div class="field" >
         <label> Name </label>
-        <input required type="text" v-model="name" />
+        <input required type="text" id="name" v-model="name" />
       </div>
-      <div class="field">
+      <div class="field" >
         <label> Price ($) </label>
-        <input required type="number  " v-model="price" />
+        <input required type="number" id="price"   v-model="price" />
       </div>
-      <div class="field">
+      <div class="field" >
         <label>Type </label>
-        <select v-model="type" @change="displayForm()">
-          <option> Type Switcher </option>
+        <select v-model="type" id="productType" @change="displayForm()">
+          <option > Type Switcher </option>
           <option value="DVD"> DVD </option>
           <option value="Book"> Book </option>
           <option value="Furniture"> Furniture </option>
@@ -34,33 +35,33 @@
 
       <div v-if="selected" class="form">
         <div v-show="type == 'DVD'">
-          <div class="field">
+          <div class="field" >
             <label> Size: </label>
-            <input type="number" v-model="value" />
+            <input type="number" id="size" v-model="value" />
             
           </div>
         </div>
 
         <div v-show="type == 'Book'">
-          <div class="field">
+          <div class="field" >
             <label> Weigth: </label>
-            <input type="number" v-model="value" />
+            <input type="number" id="weight" v-model="value" />
             
           </div>
         </div>
 
         <div v-show="type == 'Furniture'">
-          <div class="field">
+          <div class="field"  >
             <label> length: </label>
-            <input type="number" v-model="length" />
+            <input type="number" id="length" v-model="length" />
           </div>
-          <div class="field">
+          <div class="field" >
             <label> width: </label>
-            <input type="number" v-model="width" />
+            <input type="number" id="width" v-model="width" />
           </div>
-          <div class="field">
+          <div class="field" >
             <label> height: </label>
-            <input type="number" v-model="heigth" />
+            <input type="number" id="height" v-model="heigth"  />
           </div>
         </div>
       </div>

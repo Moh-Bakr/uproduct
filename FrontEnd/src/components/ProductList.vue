@@ -10,7 +10,7 @@
     <div class="separator"></div>
 
     <div class="list" v-for="product in products.body" :key="product.sku">
-      <div class="product">
+      <div class="delete-checkbox">
         <input type="checkbox" @change="addToDelete(product.ID)" />
         <p>{{ product.SKU }}</p>
         <p>{{ product.Name }}</p>
@@ -105,7 +105,8 @@ button {
 .list {
   margin: auto;
 }
-.product {
+.delete-checkbox
+,.product  {
   border: 1px solid gray;
   float: left;
   width: 20%;
